@@ -1,0 +1,42 @@
+# 'devices.yml' holds the current Device IDs for each GUI-controlled device in West House, as administered by mControl.
+# This file is used for testing when mServer is not available to connect to.
+
+# @author Johnny Rodgers
+# @date February 4th, 2010
+
+# Naming convention is as follows (with variations where appropriate), with each set joined by an underscore:
+#		control group
+#		control position (interior or exterior)
+#		control type
+#		control description
+
+# light_ext_switch_garage_sign: 2
+# light_ext_switch_west_flood: 4
+# light_ext_switch_west_entry: 6
+# light_ext_switch_balcony: 11
+# light_int_switch_garage: 3
+# light_int_dim_living: 7
+# light_int_dim_dining: 8
+# light_int_switch_stair: 9
+# light_int_switch_loft: 10
+# ambient_canvas_pwm_a: 12
+# ambient_canvas_pwm_b: 13
+# hvac_int_thermostat_main: 5
+
+garage_sign: 2
+west_flood: 4
+west_entry: 6
+balcony: 11
+garage_interior: 3
+living_dimmer: 7
+dining_dimmer: 8
+stairs: 9
+loft: 10
+ac_pwm_a: 12
+ac_pwm_b: 13
+thermostat_main: 5
+kitchen: 14
+hallway: 15
+bathroom: 16
+bathroom_mirror: 17
+

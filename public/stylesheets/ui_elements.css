@@ -1,0 +1,180 @@
+/* CSS - West House Controls - February 2010 - Johnny Rodgers */
+
+/* SLIDERS */
+
+/* Vertical */
+.vertical_slider {
+	width: 80px;
+	height: 253px;
+	padding: 20px 0;
+	margin: 0 50px 0 0;
+	float: left;
+}
+.vertical_slider .slider_bg {
+	height: 250px;
+	padding: 0;
+	background-image: url("/images/controls/light_slider_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.vertical_slider .slider_handle {
+	width: 68px;
+	height: 45px;
+	margin-top: -1px;
+	float: left;
+	cursor: pointer;
+	background-image: url("/images/controls/light_slider_handle_bg.png");
+	background-repeat: no-repeat;
+	padding: 10px;
+	background-position: center;
+	margin: -10px 0 0 -10px;
+}
+.vertical_slider .slider_value {
+	width: 58px;
+	height: 25px;
+	padding: 17px 20px 0 0;
+	font-size: 1em;
+	text-align: center;
+	cursor: pointer;
+	color: #FFF;
+}
+.vertical_slider .slider_mirror {	
+	float: right; 
+	position: relative; 
+	left: 45px;
+	top: -25px;
+}
+.vertical_slider .master_status {
+	float: left;
+	position: absolute;
+	left: 18px;
+	top: 22px;
+	font-size: 1.6em;
+	text-align: center;
+	color: #FFF;	
+}
+.vertical_slider .slider_label {
+	text-align: center;
+	padding-top: 20px;
+	width: 80px;
+	margin-left: -10px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+/* TOGGLES */
+.vertical_toggle {
+	width: 65px;
+	height: 245px;
+	padding: 20px 12px;
+	margin: 0;
+	float: left;
+}
+.vertical_toggle .toggle_bg {
+	width: 60px;
+	height: 246px;
+	background-image: url("/images/controls/light_toggle_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 2px 5px 2px 5px;
+}
+.vertical_toggle .toggle_handle {
+	width: 60px;
+	height: 140px;
+	cursor: pointer;
+	background-image: url("/images/controls/light_toggle_handle_bg.png");
+	background-repeat: no-repeat;
+}
+.vertical_toggle .toggle_value {
+	width: 60px;
+	height: 25px;
+	padding: 65px 0;
+	font-size: 1em;
+	text-align: center;
+	cursor: pointer;
+	color: #FFF;
+}
+.vertical_toggle .toggle_label {
+	text-align: center;
+	padding-top: 20px;
+	width: 80px;
+	margin-left: -5px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+/* UP/DOWN CONTROL */
+.up_down {
+	float: left;
+	margin: 0 20px 65px 0;
+}
+.up_down_value {
+	width: 72px;
+	height: 14px;
+	text-align: center;
+	padding: 25px 10px 25px 10px;
+	margin: 20px 10px 0 15px;
+	background-image: url("/images/controls/up_down_value_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 1.4em;
+	color: #68d9fd;	
+}
+.up_down_status {
+	color: #68d9fd;	
+	text-align: center;
+	font-weight: lighter;
+	font-size: 1em;
+	height: 12px;
+	width: 100px;
+	margin: 3px 5px 0 0;
+	float: right;
+}
+.up_down_buttons {
+	float: left;
+	width: 50px;
+	margin-top: 14px;
+}
+.up_down_buttons .button {
+	width: 50px;
+	height: 34px;
+	display: block;
+	margin-left: -10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.up_down_buttons .up { 
+	background-image: url("/images/controls/up.png"); 
+	padding: 10px 10px 0 10px;
+	margin-top: -5px;
+}
+.up_down_buttons .down { 
+	background-image: url("/images/controls/down.png"); 
+	padding: 0 10px 10px 10px;
+}
+.current {
+	text-align: center;
+	font-weight: lighter;
+	font-size: 0.7em;
+	color: #AAA;	
+}
+
+/* PRESET BUTTONS */
+.button_set {
+	padding: 20px 20px 20px 0;
+}
+.button_set .button {
+	float: left;
+	width: 60px;
+	height: 56px;
+	background-image: url("/images/controls/large_button.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 44px 20px 0 20px;
+	margin: -5px 25px 60px 0;
+	text-align: center;
+	color: #FFF;
+	cursor: pointer;
+}
+.button_set .button_active, .button_set a.button:hover, .button_set a.button:active { background-image: url("/images/controls/large_button_active.png"); }

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>West House</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+
+<body>
+
+	<h1>West House</h1>
+	<% if logged_in? %>
+		<p>Logged in as <strong><%= current_resident.login %></strong> | <%= link_to "Logout", logout_path %></p>
+	<% else %>
+		<p><%= link_to "Login", login_path %> | <%= link_to "Sign Up", signup_path %></p>
+	<% end %>
+	<hr />
+	
+	<%= flash[:notice] %>
+	<%= flash[:alert] %>
+	
+	<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# assign status settings to javascript object
+page.assign "status", @status
+# assign current settings to global controls hash
+page << "window.controls = recursive_clone(status);" 
+# update controls
+page << "updateControls(window.controls, false, true, '#{panel}');"

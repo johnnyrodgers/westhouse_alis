@@ -1,0 +1,23 @@
+defaults: &defaults
+  adapter: mysql
+  encoding: utf8
+  username: root
+  password: hacker
+  host: localhost
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+
+development:
+  database: westhouse_development
+  <<: *defaults
+
+test:
+  database: westhouse_test
+  <<: *defaults
+
+production:
+  database: westhouse_production
+  <<: *defaults
+
+datalogs:
+  database: westhouse_datalogs
+  <<: *defaults   

@@ -1,0 +1,19 @@
+<h1>Listing presets</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @presets.each do |preset| %>
+  <tr>
+  	<td><%= preset.name %></td>
+    <td><%= link_to 'Show', preset %></td>
+    <td><%= link_to 'Edit', edit_preset_path(preset) %></td>
+    <td><%= link_to 'Destroy', preset, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New preset', new_preset_path %>

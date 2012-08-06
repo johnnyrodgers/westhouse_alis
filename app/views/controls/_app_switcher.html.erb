@@ -1,0 +1,11 @@
+<div id="nav">
+	<div id="nav_divider"></div>
+	<div id="links">
+		<% @links.each do |link| %>
+			<a href="<%= link.href %>" id="<%= link.name %>_link" class="link">
+				<%= image_tag("/images/icons/links/" + link.icon, :alt => link.name) %><br />
+				<%= link.name %>
+			</a>
+		<% end %>
+	</div>
+</div>

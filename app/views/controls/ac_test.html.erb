@@ -1,0 +1,61 @@
+<%= javascript_include_tag :defaults %>
+
+<h1>Ambient Canvas Test Utility</h1>
+
+<% form_tag "ac_test" do %> 
+	<table style="float: left; margin-right: 100px;">
+		<tr>
+			<td style="width: 125px;">CHANNEL</td>
+			<td>
+				<select name="channel" id="channel">
+					<option value="ALL" selected>ALL</option>
+					<% (1..14).each do |i| %>
+						<option value="<%= i %>"><%= i %></option>
+					<% end%>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>RAMP TO</td>
+			<td><input type="text" name="duty" id="duty" /> (0-255)</td>
+		</tr>
+		<tr>
+			<td>MILLISECONDS</td>
+			<td><input type="text" name="ms" id="ms" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><br /><input type="submit" value="Send Command(s)" /></td>
+		</tr>
+	</table>
+<% end %>
+
+<table style="float: left; margin-right: 100px;">
+	<tr>
+		<td style="width: 125px;">UPWARD MOTION</td>
+		<td>
+			<%= button_to_remote "Test Pattern", :update => "commands", :url => { :action => "ac_test_pattern", :id => 1 } %>
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 125px;">RANDOM PULSES</td>
+		<td>
+			<%= button_to_remote "Test Pattern", :update => "commands", :url => { :action => "ac_test_pattern", :id => 2 } %>
+		</td>
+	</tr>
+<!--
+	<tr>
+		<td style="width: 125px;">SLOW PULSE</td>
+		<td>
+			<%= button_to_remote "Test Pattern", :update => "commands", :url => { :action => "ac_test_pattern", :id => 3 } %>
+		</td>
+	</tr>
+-->
+</table>
+
+<div style="clear: both"></div>
+
+<h3>Commands Sent</h3>
+<p style="border: 1px solid #DDD; background: #EEE; color: #333; padding: 1em;" id="commands">	
+	<%= flash[:notice] %>
+</p>

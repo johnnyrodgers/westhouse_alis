@@ -1,0 +1,14 @@
+<div id="<%= set_id %>" class="button_set">
+	<% @presets.each do |preset| %>
+		<%= link_to_function(preset.name.upcase, "setPreset(#{preset.id}, '#{set_id}', '#{@client_id}')", :id => "#{set_id}_#{preset.id}", :class => "button") %>
+	<% end %>
+	<script type="text/javascript">
+		<%= update_page do |page|
+				# assign preset settings to javascript variables
+				@presets.each do |preset|					
+					page.assign "preset_#{preset.id}_settings", preset.settings
+				end				
+			end
+		%>
+	</script>
+</div>

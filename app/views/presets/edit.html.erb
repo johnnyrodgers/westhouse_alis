@@ -1,0 +1,16 @@
+<h1>Editing preset</h1>
+
+<% form_for(@preset) do |f| %>
+  <%= f.error_messages %>
+
+	<p><label for="name">Name</label><br/>
+	<%= f.text_field :name %></p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @preset %> |
+<%= link_to 'Back', presets_path %>
+
+

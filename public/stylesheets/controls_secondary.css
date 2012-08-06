@@ -1,0 +1,251 @@
+/* CSS - West House Controls - February 2010 - Johnny Rodgers */
+
+html, body {
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	font-family: "Trade Gothic LT", "Futura Bk BT", sans-serif;
+	text-shadow: #333 0 0 3px;
+	font-weight: lighter;
+	font-size: 14px;
+	overflow: hidden;
+	width: 800px;
+	height: 600px;
+}
+#container {
+	background: -webkit-gradient(
+							  linear,
+							  left top,
+							  left bottom,
+							  color-stop(0, rgb(136,136,136)),
+							  color-stop(1, rgb(68,68,68))
+							);
+	background:	-moz-linear-gradient(
+						    center top,
+						    rgb(136,136,136) 0%,
+						    rgb(68,68,68) 100%
+							);
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* HEADINGS */
+h3 {
+	font-size: 1.2em;
+	color: #FFF;
+	font-weight: lighter;
+}
+
+/* LINKS */
+a, a:link, a:visited, a:hover, a:active, a:focus, a img {
+	border: 0;
+	color: #66ccff;
+	border: none;
+	text-decoration: none;
+	outline: none; /* Hide dotted links around focussed links */
+}
+#links {
+	padding: 12px 25px 25px 25px;
+}
+#links a {
+	width: 105px;
+	height: 70px;
+	display: block;
+	float: left;
+	padding: 0px 20px 0 15px;
+	margin: 0 30px 0 0;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 2px solid #BBB;
+	font-size: 0.9em;
+	-webkit-box-shadow: 0 0 5px #333;
+	-moz-box-shadow: 0 0 5px #333;
+	background: -webkit-gradient(
+							  linear,
+							  left top,
+							  left bottom,
+							  color-stop(0, rgb(136,136,136)),
+							  color-stop(1, rgb(68,68,68))
+							);
+	background:	-moz-linear-gradient(
+						    center top,
+						    rgb(136,136,136) 0%,
+						    rgb(68,68,68) 100%
+							);
+}
+#links a img {
+	margin: 0 0 3px -7px;
+	width: 120px;
+}
+
+/* TEXT */
+p { margin: 0; padding: 0; }
+
+/* MENU */
+#menu {
+	height: 30px;
+	padding: 3px 25px 7px;
+	font-size: 1.2em;
+	border-bottom: 1px solid #444;
+	background: -webkit-gradient(
+							  linear,
+							  left top,
+							  left bottom,
+							  color-stop(0, rgb(60,60,60)),
+							  color-stop(1, rgb(180,180,180))
+							);
+	background:	-moz-linear-gradient(
+						    center top,
+						    rgb(60,60,60) 0%,
+						    rgb(180,180,180) 100%
+							);
+}
+#menu div {
+	padding-top: 10px;
+}
+#menu h1 {
+	float: left;
+	font-size: 1em;
+	font-weight: normal;
+	width: 150px;
+}
+#menu #weather {
+	float: left;
+	text-align: center;
+	width: 120px;
+}
+#menu #weather img {
+	float: left;
+	margin: -12px -33px 0 0;	
+}
+#menu #user_status {
+	float: left;
+	font-size: 0.8em;	
+	padding-top: 12px;
+}
+#menu #date {
+	float: right;
+	text-align: right;
+}
+
+/* CONTROLS */
+#controls {
+	padding: 0 25px;
+	border-bottom: 1px solid #444;
+	height: 450px;
+}
+#controls #lights, #controls #presets, #controls #hvac {
+	position: absolute;
+}
+#controls hr {
+	width: 800px;
+	border: none;
+	border-bottom: 1px solid #888;
+	margin: 0;
+	padding: 0;
+	top: 361px;
+	left: 0;
+	position: absolute;
+}
+
+/* LIGHTS */
+#controls #lights {
+	height: 300px;
+	top: 41px;
+	padding: 0 0 20px 0;
+	left: 10px;
+}
+#controls #lights .vertical_toggle {
+	padding-right: 25px;
+}
+#controls #lights #living_dimmer {
+	margin-left: 20px;
+}
+.vertical_slider .slider_label, .vertical_toggle .toggle_label {
+	padding-top: 15px;
+}
+
+
+/* PRESETS */
+#controls #presets {
+	width: 550px;
+	height: 130px;
+	top: 363px;
+	left: 20px;
+	padding: 0;
+	border-right: 1px solid #888;
+}
+#controls #presets h3 {
+	margin-left: 7px;
+}
+.button_set {
+	padding: 20px 20px 20px 0;
+}
+.button_set .button {
+	float: left;
+	width: 60px;
+	height: 56px;
+	background-image: url("/images/controls/large_button.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 44px 20px 0 20px;
+	margin: -5px 5px 0 0;
+	text-align: center;
+	color: #FFF;
+	cursor: pointer;
+}
+.button_set .button_active, .button_set a.button:hover, .button_set a.button:active { background-image: url("/images/controls/large_button_active.png"); }
+
+/* HVAC */
+#controls #hvac {
+	width: 240px;
+	top: 361px;
+	left: 570px;
+	padding: 16px 20px;
+}
+#controls #hvac h3 {
+	display: none;
+	height: 0;
+}
+
+/* NAV */
+#nav {
+	width: 100%;
+	height: 168px;
+	padding: 0;
+	background: url("/images/controls/perforations.png") no-repeat,
+							-webkit-gradient(
+							  linear,
+							  left top,
+							  left bottom,
+							  color-stop(0, rgb(140,140,140)),
+							  color-stop(1, rgb(51,51,51))
+							);
+	background:	url("/images/controls/perforations.png") no-repeat,
+							-moz-linear-gradient(
+						    center top,
+						    rgb(140,140,140) 0%,
+						    rgb(51,51,51) 100%
+							);
+	
+}
+
+#nav_divider {
+	width: 100%;
+	height: 10px;
+	background: -webkit-gradient(
+							  linear,
+							  left top,
+							  left bottom,
+							  color-stop(0, rgb(140,140,140)),
+							  color-stop(1, rgb(51,51,51))
+							);
+	background:	-moz-linear-gradient(
+						    center top,
+						    rgb(140,140,140) 0%,
+						    rgb(51,51,51) 100%
+							);
+}

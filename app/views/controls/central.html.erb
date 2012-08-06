@@ -1,0 +1,59 @@
+<div id="container">
+
+	<%= render :partial => "menu" %>
+
+	<div id="controls">
+		<div id="lights">
+			<div id="lights_living">
+				<h3>LIVING</h3>		
+				<%= render :partial => "controls/UI/vertical_slider", :locals => { :subsystem => "lights", :slider_id => "living_dimmer", :value => @status[:lights][:living_dimmer], :label => "Living", :device_id => DEVICES["living_dimmer"] } %>
+				<%= render :partial => "controls/UI/vertical_slider", :locals => { :subsystem => "lights", :slider_id => "dining_dimmer", :value => @status[:lights][:dining_dimmer], :label => "Dining", :device_id => DEVICES["dining_dimmer"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "hallway", :state => @status[:lights][:hallway], :label => "Hallway", :device_id => DEVICES["hallway"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "stairs", :state => @status[:lights][:stairs], :label => "Stairs", :device_id => DEVICES["stairs"] } %>
+			</div>
+			<div id="lights_loft">			
+				<h3>LOFT</h3>		
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "loft", :state => @status[:lights][:loft], :label => "Loft", :device_id => DEVICES["loft"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "bedside_lamps", :state => @status[:lights][:bedside_lamps], :label => "Lamps", :device_id => DEVICES["bedside_lamps"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "balcony", :state => @status[:lights][:balcony], :label => "Balcony", :device_id => DEVICES["balcony"] } %>
+			</div>
+			<div id="lights_kitchen">
+				<h3>KITCHEN</h3>		
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "kitchen", :state => @status[:lights][:kitchen], :label => "kitchen", :device_id => DEVICES["kitchen"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "ac_pwm_a", :state => @status[:ambient_canvas][:ac_pwm_a], :label => "Ambient Canvas", :device_id => DEVICES["ac_pwm_a"] } %>
+			</div>
+			<div id="lights_bathroom">
+				<h3>BATHROOM</h3>		
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "bathroom", :state => @status[:lights][:bathroom], :label => "Ceiling", :device_id => DEVICES["bathroom"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "bathroom_mirror", :state => @status[:lights][:bathroom_mirror], :label => "Mirror", :device_id => DEVICES["bathroom_mirror"] } %>
+			</div>
+			<div id="lights_garage">
+				<h3>GARAGE</h3>		
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "garage_interior", :state => @status[:lights][:garage_interior], :label => "Interior", :device_id => DEVICES["garage_interior"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "west_flood", :state => @status[:lights][:west_flood], :label => "Rear Entry", :device_id => DEVICES["west_flood"] } %>
+			</div>
+			<div id="lights_exterior">
+				<h3>EXTERIOR</h3>		
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "west_entry", :state => @status[:lights][:west_entry], :label => "West Entry", :device_id => DEVICES["west_entry"] } %>
+				<%= render :partial => "controls/UI/vertical_toggle", :locals => { :toggle_id => "garage_sign", :state => @status[:lights][:garage_sign], :label => "House Sign", :device_id => DEVICES["garage_sign"] } %>
+			</div>
+		</div>
+		<div id="presets">
+			<h3>PRESETS</h3>
+			<%= render :partial => "controls/UI/preset_buttons", :locals => { :set_id => "central_preset_buttons" } %>
+		</div>
+		<div id="hvac">
+			<%= render :partial => "controls/UI/up_down", :locals => { :control_id => "thermostat_main", :device_id => DEVICES["thermostat_main"], :subsystem => "hvac", :key => "thermostat_main", :value => @status[:hvac][:thermostat_main], :label => "LIVING", :units => "&deg;C" } %>
+			<%= render :partial => "controls/UI/up_down", :locals => { :control_id => "thermostat_loft", :device_id => DEVICES["thermostat_loft"], :subsystem => "hvac", :key => "thermostat_loft", :value => @status[:hvac][:thermostat_loft], :label => "LOFT", :units => "&deg;C" } %>
+			<%= render :partial => "controls/UI/up_down", :locals => { :control_id => "thermostat_bathroom", :device_id => DEVICES["thermostat_bathroom"], :subsystem => "hvac", :key => "thermostat_bathroom", :value => @status[:hvac][:thermostat_bathroom], :label => "BATHROOM", :units => "&deg;C" } %>
+			<%= render :partial => "controls/UI/up_down", :locals => { :control_id => "thermostat_garage", :device_id => DEVICES["thermostat_garage"], :subsystem => "hvac", :key => "thermostat_garage", :value => @status[:hvac][:thermostat_garage], :label => "GARAGE", :units => "&deg;C" } %>
+		</div>
+	</div>
+
+	<%= render :partial => "app_switcher" %>
+	
+</div>
+		
+<script type="text/javascript">
+	<%= render :partial => "controls.rjs", :locals => { :panel => "central" } %>
+</script>
